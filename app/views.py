@@ -1,22 +1,23 @@
 from django.shortcuts import render,redirect
-#import pyrebase
-import os
 
+import os
+from django.conf import settings
+from django.contrib import messages
+from django.core.files.storage import default_storage
 # Create your views here.
+#import pyrebase
 """ config = {
     "apiKey": "AIzaSyCYZugIp7w9s75W61K6kk1HOFhaKGV1Qc4",
 
     "authDomain": "django-test-1-d4b92.firebaseapp.com",
-
+    "databaseURL": "https://django-test-1-d4b92-default-rtdb.firebaseio.com/",
     "projectId": "django-test-1-d4b92",
 
     "storageBucket": "django-test-1-d4b92.appspot.com",
 
     "messagingSenderId": "644116425430",
 
-    "appId": "1:644116425430:web:2379973b285e0eb9eaf777",
-
-    "measurementId": "G-5Z924L84EY"
+    "appId": "1:644116425430:web:2379973b285e0eb9eaf777"
 
 
 }
@@ -24,7 +25,6 @@ import os
 firebase = pyrebase.initialize_app(config)
 storage = firebase.storage()
 database=firebase.database() """
-
 
 def index(request):
     #return redirect("index")

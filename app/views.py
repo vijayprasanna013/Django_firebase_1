@@ -1,9 +1,9 @@
 from django.shortcuts import render,redirect
-
-import os
+from .models import *
+""" import os
 from django.conf import settings
 from django.contrib import messages
-from django.core.files.storage import default_storage
+from django.core.files.storage import default_storage """
 # Create your views here.
 #import pyrebase
 """ config = {
@@ -29,3 +29,7 @@ database=firebase.database() """
 def index(request):
     #return redirect("index")
     return render(request,"app/index.html")
+
+def post_list(request):
+   posts = Post.objects.all()
+   return render(request, 'myapp/post_list.html', {'posts': posts})

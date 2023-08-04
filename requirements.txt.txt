@@ -1,5 +1,0 @@
-Django>=3.2,<4
-requests>=2.26.0
-pip install -r requirements.txt
-find . -name "__pycache__" -exec rm -r {} \;
-find . -name "*.pyc" -exec rm -f {} \;

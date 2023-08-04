@@ -1,8 +1,12 @@
-from django.shortcuts import render, redirect
+""" from django.shortcuts import render, redirect
 from django.shortcuts import render
 from django.conf import settings
 from django.core.files.storage import default_storage
 from django.contrib import messages
+import pyrebase
+import os
+from .models import * """
+from django.shortcuts import render
 import pyrebase
 import os
 from .models import *
@@ -25,7 +29,7 @@ db = firebase.database()
 
 storage = firebase.storage()
 
-def main(request):
+""" def main(request):
     if request.method == 'POST':
         file = request.FILES['file']
         file_save = default_storage.save(file.name, file)
@@ -36,7 +40,7 @@ def main(request):
     else:
         return render(request, 'main.html')
 
-
+ """
 
 def index(request):
     if request.method == 'POST':

@@ -76,30 +76,20 @@ WSGI_APPLICATION = 'projectone.wsgi.application'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 # Firebase Configuration
-config = {
-    "apiKey": "AIzaSyCYZugIp7w9s75W61K6kk1HOFhaKGV1Qc4",
-    "authDomain": "django-test-1-d4b92.firebaseapp.com",
-    "databaseURL": "https://django-test-1-d4b92-default-rtdb.firebaseio.com/",
-    "projectId": "django-test-1-d4b92",
-    "storageBucket": "django-test-1-d4b92.appspot.com",
-    "messagingSenderId": "644116425430",
-    "appId": "1:644116425430:web:2379973b285e0eb9eaf777",
-    "measurementId": "G-5Z924L84EY",
-    
-    "type": "service_account",
-    "project_id": "django-test-1-d4b92"
 
-}
 #FIREBASE_CONFIG_FILE = 'firebase_config.json'
 """ cred = credentials.Certificate(config)
 firebase_admin.initialize_app(cred) """
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django_firebase_app.firebase',
-        'URL': 'https://django-test-1-d4b92-default-rtdb.firebaseio.com/',
-        'NAME': 'default',
-    }
+     'default':{
+      'ENGINE':'django.db.backends.postgresql_psycopg2',
+      'NAME':'railway',
+      'USER':'postgres',
+      'PASSWORD':'uNqmzhw5EKvUaMYNBpxF',
+      'HOST':'containers-us-west-208.railway.app',
+      'PORT':'6375',
+   }
 }
 
 
